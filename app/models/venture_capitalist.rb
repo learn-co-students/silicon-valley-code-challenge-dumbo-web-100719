@@ -38,7 +38,7 @@ class VentureCapitalist
     def biggest_investment
         self.funding_rounds.reduce(nil) do |memo, funding_round|
             if memo == nil
-                self.fundings_round[0]
+                self.funding_rounds[0]
             end
             if funding_round.investment.to_f > memo.investment.to_f
                 memo = funding_round
