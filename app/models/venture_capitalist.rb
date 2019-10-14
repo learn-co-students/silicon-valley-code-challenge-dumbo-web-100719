@@ -36,8 +36,8 @@ class VentureCapitalist
     end
 
     def biggest_investment
-        self.funding_rounds.reduce(nil) do |memo, funding_round|
-            if memo == nil
+        self.funding_rounds.reduce('nil') do |memo, funding_round|
+            if memo == 'nil'
                 self.funding_rounds[0]
             end
             binding.pry
