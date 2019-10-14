@@ -12,13 +12,13 @@ companyB = Startup.new("Forest", "companyFounderB", "domainB")
 companyC = Startup.new("Arnold","companyFounderA", "domainC")
 
 Ruben = VentureCapitalist.new("Ruben", 1_100_000)
-Jennifer = VentureCapitalist.new("Jennifer", 2_000_000)
+Jennifer = VentureCapitalist.new("Jennifer", 1_000_000)
 
 roundA = FundingRound.new(companyA, Ruben, "tech", 100000)
 roundB = FundingRound.new(companyB, Jennifer, "finance", 30000)
 
-new_funding_round = companyA.sign_contract(Ruben, "newtype", 300_000)
-second_new_funding = companyA.sign_contract(Jennifer, "othertype", 20)
+roundC = companyA.sign_contract(Ruben, "newtype", 300_000)
+roundD = companyA.sign_contract(Jennifer, "othertype", 20)
 
 
 binding.pry
