@@ -11,10 +11,10 @@ companyA = Startup.new("Tom","companyFounderA", "domainA")
 companyB = Startup.new("Forest", "companyFounderB", "domainB")
 companyC = Startup.new("Arnold","companyFounderA", "domainC")
 
-Ruben = VentureCapitalist.new("Ruben", 1_000)
-Jennifer = VentureCapitalist.new("Jennifer", 2_000)
+Ruben = VentureCapitalist.new("Ruben", 1_000_000)
+Jennifer = VentureCapitalist.new("Jennifer", 2_000_000)
 
-roundA = FundingRound.new(companyA, Ruben, "tech", 1_200_000)
+roundA = FundingRound.new(companyA, Ruben, "tech", 100000)
 roundB = FundingRound.new(companyB, Jennifer, "finance", 30000)
 
 
