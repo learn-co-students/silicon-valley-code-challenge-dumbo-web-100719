@@ -27,7 +27,7 @@ class Startup
 
     end
 
-    def domains 
+    def self.domains 
         Startup.all.map do |one_startup|
             one_startup.domain
         end

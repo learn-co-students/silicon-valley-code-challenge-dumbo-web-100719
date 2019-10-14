@@ -6,10 +6,10 @@ end
 # Insert code here to run before hitting the binding.pry
 # This is a convenient place to define variables and/or set up new object instances,
 # so they will be available to test and play around with in your console
-companyC = Startup.new("Arnold","companyFounderA", "domainC")
+
 companyA = Startup.new("Tom","companyFounderA", "domainA")
 companyB = Startup.new("Forest", "companyFounderB", "domainB")
-# companyC = Startup.new("Arnold","companyFounderA", "domainC")
+companyC = Startup.new("Arnold","companyFounderA", "domainC")
 
 Ruben = VentureCapitalist.new("Ruben", 1_000)
 Jennifer = VentureCapitalist.new("Jennifer", 2_000)

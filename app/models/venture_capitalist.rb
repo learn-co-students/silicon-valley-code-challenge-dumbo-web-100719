@@ -12,7 +12,7 @@ class VentureCapitalist
         @@all
     end
 
-    def tres_commas_club
+    def self.tres_commas_club
         self.all.select do |one_venture|
             one_venture.total_worth > 1_000_000
         end
