@@ -40,6 +40,7 @@ class VentureCapitalist
             if memo == nil
                 self.funding_rounds[0]
             end
+            binding.pry
             if (funding_round.investment > memo.investment)
                 memo = funding_round
                 memo
