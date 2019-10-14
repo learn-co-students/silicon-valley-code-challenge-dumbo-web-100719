@@ -48,11 +48,11 @@ class VentureCapitalist
     end
 
     def invested(domain)
-        funding_round_by_domain = self.funding_round.select do |funding_round|
+        funding_rounds_by_domain = self.funding_rounds.select do |funding_round|
             funding_round.startup.domain == domain
         end
 
-        funding_round_by_domain.reduce(0) do |memo, funding_round|
+        funding_rounds_by_domain.reduce(0.0) do |memo, funding_round|
             memo = memo += funding_round.investment
             memo
         end
