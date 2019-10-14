@@ -38,7 +38,8 @@ class VentureCapitalist
 
     def invested(domain)
         total_invested = 0
-        funding_rounds.select {|fund| total_invested += fund.investment}
+        domain_investments = FundingRound.all.select {|fund| fund.startup.domain == domain }
+        domain_investments.select {|fund| total_invested += fund.investment}
         total_invested
     end
 
