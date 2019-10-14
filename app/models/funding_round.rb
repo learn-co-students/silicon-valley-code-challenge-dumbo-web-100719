@@ -9,7 +9,7 @@ class FundingRound
         @startup = startup
         @venture_capitalist = venture_capitalist
         @type = type
-        @investment = Math.abs(investment.to_f)
+        @investment = investment.abs.to_f
     end
 
     def self.all

@@ -9,7 +9,13 @@ end
 
 companyA = Startup.new("Tom","companyFounderA", "domainA")
 companyB = Startup.new("Forest", "companyFounderB", "domainB")
-companyC = Startup.new("Herald", "companyFounderC", "domainC")
+
+Ruben = VentureCapitalist.new("Ruben", 1_000)
+Jennifer = VentureCapitalist.new("Jennifer", 2_000)
+
+roundA = FundingRound.new(companyA, Ruben, "tech", 100000)
+roundB = FundingRound.new(companyB, Jennifer, "finance", 30000)
+
 
 
 binding.pry
