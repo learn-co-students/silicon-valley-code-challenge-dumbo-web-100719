@@ -17,6 +17,8 @@ Jennifer = VentureCapitalist.new("Jennifer", 2_000_000)
 roundA = FundingRound.new(companyA, Ruben, "tech", 100000)
 roundB = FundingRound.new(companyB, Jennifer, "finance", 30000)
 
+new_funding_round = companyA.sign_contract(Ruben, "newtype", 300_000)
+
 
 
 binding.pry
