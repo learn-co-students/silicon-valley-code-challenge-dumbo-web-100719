@@ -9,6 +9,7 @@ end
 
 companyA = Startup.new("Tom","companyFounderA", "domainA")
 companyB = Startup.new("Forest", "companyFounderB", "domainB")
+companyC = Startup.new("Arnold","companyFounderA", "domainC")
 
 Ruben = VentureCapitalist.new("Ruben", 1_000)
 Jennifer = VentureCapitalist.new("Jennifer", 2_000)

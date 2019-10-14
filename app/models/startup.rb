@@ -20,7 +20,7 @@ class Startup
         @@all
     end
 
-    def find_by_founder(founder_name)
+    def self.find_by_founder(founder_name)
         Startup.all.find do |one_startup|
             one_startup.founder == founder_name
         end
