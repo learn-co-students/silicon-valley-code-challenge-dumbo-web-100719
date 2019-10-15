@@ -1,7 +1,7 @@
 require 'pry'
 
 class VentureCapitalist
-    @@all = []
+    # @@all = []
 
     attr_accessor :name
     attr_reader :total_worth
@@ -9,11 +9,14 @@ class VentureCapitalist
     def initialize(name, total_worth)
         @name = name
         @total_worth = total_worth
-        @@all << self
+        # @@all << self
     end
 
     def self.all
-        @@all
+        # @@all
+        FundingRound.all.map do |round|
+            round.venture_capitalist
+        end
     end
 
     def self.tres_commas_club
@@ -52,7 +55,20 @@ class VentureCapitalist
     end
 
     # def invested(domain)
-        
+    #    total = funding_rounds.map do |round|
+    #         round.investment
+    #     end
+    #     total.sum
     # end
+
+    def invested(domain)
+        domain_invested = funding_rounds.select do |round|
+             round.startup.domain == domain
+        end
+        total = domain_invested.map do |round|
+            round.investment
+        end
+        total.sum
+    end
 
 end

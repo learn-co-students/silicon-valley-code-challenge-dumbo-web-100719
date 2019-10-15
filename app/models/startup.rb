@@ -1,7 +1,7 @@
 require 'pry'
 
 class Startup
-    @@all = []
+    # @@all = []
 
     attr_accessor :name
     attr_reader :founder, :domain
@@ -10,11 +10,14 @@ class Startup
         @name = name
         @founder = founder
         @domain = domain
-        @@all << self
+        # @@all << self
     end
 
     def self.all
-        @@all
+        # @@all
+        FundingRound.all.map do |round|
+            round.startup
+        end
     end
 
     def find_by_founder(founder)
@@ -54,8 +57,17 @@ class Startup
     end
 
     # def total_funds
-
+        #funding rounds returns an array of the funding rounds
+        #we can take the investments from each funding round
+        #and add them together?
     # end
+
+    def total_funds
+       investment = funding_rounds.map do |round|
+            round.investment
+       end
+       investment.sum
+    end
 
     def funding_rounds
         FundingRound.all.select do |round|
@@ -74,5 +86,10 @@ class Startup
             investor.total_worth >= 1_000_000_00
         end
     end
+
+    def pivot(domain)
+        @domain = domain
+    end
+    
     
 end
